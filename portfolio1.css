@@ -13,6 +13,50 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Navbar container styling */
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:#1F2225;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+/* Navigation bar styling */
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 35px;
+    margin-right: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #f39c12;
+}
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -24,7 +68,7 @@ body {
     text-align: center;
     position: relative;
     overflow: hidden;
-    z-index: 1; /* Ensure hero section is clickable */
+    z-index: 1;
 }
 
 /* Add a subtle background animation */
@@ -37,7 +81,7 @@ body {
     bottom: 0;
     background: rgba(255, 255, 255, 0.1);
     animation: floatingBackground 20s infinite ease-in-out;
-    z-index: -1; /* Ensure the background is behind everything */
+    z-index: -1;
 }
 
 @keyframes floatingBackground {
@@ -50,7 +94,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1.5s forwards;
-    z-index: 2; /* Ensure text is clickable */
+    z-index: 2;
 }
 
 /* Animation for text fade-in */
@@ -96,7 +140,6 @@ body {
     z-index: 2;
 }
 
-/* Button Styling */
 .hero .btn {
     padding: 12px 24px;
     background-color: #FFD700;
@@ -105,7 +148,7 @@ body {
     border-radius: 50px;
     font-size: 1.3rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    z-index: 2; /* Ensure button is clickable */
+    z-index: 2;
     position: relative;
 }
 
@@ -113,6 +156,7 @@ body {
     background-color: #e6c200;
     transform: translateY(-5px);
 }
+
 /* About Section */
 .about {
     padding: 50px;
@@ -121,10 +165,11 @@ body {
     align-items: center;
     justify-content: center;
     text-align: left;
+    flex-wrap: wrap;
 }
 
 .about img {
-    width: 40%;
+    width: 100%;
     max-width: 400px;
     border-radius: 10px;
     margin-right: 30px;
@@ -132,6 +177,7 @@ body {
 
 .about-text {
     flex: 1;
+    max-width: 600px;
 }
 
 .about h2 {
@@ -143,6 +189,7 @@ body {
     font-size: 1.2rem;
     line-height: 1.6;
 }
+
 /* Portfolio Section */
 .portfolio {
     padding: 50px;
@@ -156,6 +203,8 @@ body {
 
 .portfolio-grid {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-around;
     gap: 20px;
 }
@@ -177,12 +226,12 @@ body {
 }
 
 .portfolio-item:hover img {
-    transform: scale(1.1); /* Zoom in effect on hover */
+    transform: scale(1.1);
 }
 
 .portfolio-item:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Overlay styling */
@@ -203,7 +252,12 @@ body {
     transition: opacity 0.5s ease;
     text-align: center;
     padding: 20px;
-    z-index: 1; /* Ensure overlay is above the image */
+    z-index: 1;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .overlay h3 {
@@ -216,133 +270,7 @@ body {
     font-size: 1rem;
 }
 
-/* Show overlay on hover */
-.portfolio-item:hover .overlay {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.portfolio-description {
-    font-size: 1.2em;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-
-/* Contact Section */
-.contact {
-    padding: 20px; /* Reduced padding for a smaller section */
-    background-color: #333;
-    color: white;
-    text-align: center;
-}
-
-/* Contact Wrapper for Side by Side Layout */
-.contact-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px; /* Reduced gap between contact details and form */
-    margin-top: 10px;
-}
-
-/* Contact Details Styling */
-.contact-details {
-    flex: 1;
-    text-align: left;
-}
-
-.contact-details h2 {
-    font-size: 2rem; /* Reduced font size */
-    margin-bottom: 0.75rem;
-}
-
-.contact-details p {
-    font-size: 1rem; /* Reduced font size */
-    margin-bottom: 8px; /* Reduced spacing between paragraphs */
-}
-
-.social-links a {
-    color: white;
-    font-size: 1.2rem; /* Reduced icon size */
-    margin: 0 8px;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #FFD700;
-}
-
-/* Contact Form Styling */
-.contact-form {
-    flex: 1;
-    text-align: left;
-}
-
-.contact-form h3 {
-    font-size: 1.5rem; /* Reduced font size */
-    margin-bottom: 15px;
-    color: white;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px; /* Reduced padding */
-    margin-bottom: 12px; /* Reduced spacing */
-    border: none;
-    border-radius: 5px;
-    font-size: 0.9rem; /* Reduced font size */
-    box-sizing: border-box;
-    background-color: #444;
-    color: white;
-}
-
-.contact-form textarea {
-    height: 120px; /* Reduced height of the textarea */
-    resize: none;
-}
-
-.contact-form button {
-    padding: 10px 18px; /* Reduced padding */
-    background-color: #FFD700;
-    color: #333;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem; /* Reduced font size */
-    cursor: pointer;
-    width: 100%;
-}
-
-.contact-form button:hover {
-    background-color: #e6c200;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .contact-wrapper {
-        flex-direction: column;
-    }
-}
-
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #111;
-    color: white;
-    font-size: 0.9rem;
-}
-
-
-
-
-
-
-
-
-/* My Services Section */
+/* Services Section */
 .services {
     padding: 50px;
     text-align: center;
@@ -361,8 +289,9 @@ footer {
 
 .services-grid {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-around;
 }
 
 .service-item {
@@ -409,15 +338,186 @@ footer {
     background-color: #e6c200;
 }
 
-/* Responsive Styling */
-@media (max-width: 768px) {
+/* Contact Section */
+.contact {
+    padding: 50px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-details {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-details h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.contact-details p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FFD700;
+}
+
+.contact-form {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background-color: #444;
+    color: white;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e6c200;
+}
+
+/* Responsive Styles */
+
+/* Mobile First Approach */
+/* Flexbox layout adjustments for mobile */
+.about {
+    flex-direction: column;
+    text-align: center;
+}
+
+.about img {
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.portfolio-grid {
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-item {
+    width: 100%;
+}
+
+.services-grid {
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-item {
+    width: 100%;
+}
+
+.contact-wrapper {
+    flex-direction: column;
+}
+
+/* Tablet (min-width: 600px) */
+@media (min-width: 600px) {
+    .navbar ul {
+        flex-direction: row;
+    }
+
+    .about {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .portfolio-grid {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    .portfolio-item {
+        width: 45%;
+    }
+
     .services-grid {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
     }
 
     .service-item {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 45%;
+    }
+
+    .contact-wrapper {
+        flex-direction: row;
+    }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero .highlight {
+        font-size: 4rem;
+    }
+
+    .navbar ul li a {
+        font-size: 20px;
+    }
+
+    .portfolio-grid {
+        gap: 30px;
+    }
+
+    .portfolio-item {
+        width: 30%;
+    }
+
+    .services-grid {
+        justify-content: space-around;
+    }
+
+    .service-item {
+        width: 30%;
     }
 }
