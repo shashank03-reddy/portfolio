@@ -33,8 +33,21 @@ body {
     justify-content: flex-end;
     padding-right: 35px;
     margin-right: 10px;
+    position: relative;
 }
 
+/* Add styling for the 'Portfolio' text */
+.portfolio-text {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    left: -90px; /* Align the text to the far left */
+    padding-left: 0px; /* Add space from the edge */
+    line-height: 30px; /* Center the text vertically if needed */
+}
+
+/* Ensure the navbar items remain aligned to the right */
 .navbar ul {
     list-style: none;
     margin: 0;
@@ -57,6 +70,7 @@ body {
 .navbar ul li a:hover {
     color: #f39c12;
 }
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -191,6 +205,7 @@ body {
 }
 
 /* Portfolio Section */
+/* Portfolio Section */
 .portfolio {
     padding: 50px;
     text-align: center;
@@ -206,7 +221,6 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-around;
-    gap: 20px;
 }
 
 /* Portfolio Item */
@@ -233,6 +247,23 @@ body {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
+
+/* View More with Down Arrow */
+.view-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.view-more:hover {
+    color: #0056b3;
+    transform: translateY(5px); /* Adds smooth movement when hovering */
+}
+
 
 /* Overlay styling */
 .overlay {
@@ -520,4 +551,14 @@ body {
     .service-item {
         width: 30%;
     }
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: white;
+    font-size: 0.9rem;
 }

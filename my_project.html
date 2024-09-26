@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Reset default margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            font-family: 'Roboto', sans-serif;
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+        }
+
+        body {
+            background: url('img7.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            /* Align items at the top to allow scrolling */
+        }
+
+        .container {
+            text-align: center;
+            max-width: 100%;
+            width: 100%;
+            padding: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            /* Ensure no overflow in the container */
+        }
+
+        /* Initially hide the elements */
+        .project-title,
+        .project-image,
+        .project-description,
+        .project-link,
+        .technologies,
+        .side-by-side {
+            opacity: 0;
+            transform: translateY(20px);
+            /* Offscreen effect */
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff6347;
+            font-family: 'Montserrat', sans-serif;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .image-container {
+            margin-bottom: 30px;
+        }
+
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+            /* Smaller image size */
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-description {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            line-height: 1.8;
+            color: #fff;
+        }
+
+        /* Style for the Technologies and Frameworks section */
+        .technologies {
+            color: white;
+            /* Change text color */
+            font-size: 1.3rem;
+            /* Increase font size */
+            margin-top: 20px;
+            text-align: center;
+            line-height: 2;
+        }
+
+        .technologies strong {
+            font-size: 2rem;
+            /* Larger for the title */
+            color: #ffd700;
+            /* Different color for title */
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #0015d471;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-link:hover {
+            background-color: #ff4500;
+        }
+
+        /* Flexbox layout for image and description after the link */
+        .side-by-side {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .side-by-side .side-image {
+            max-width: 50%;
+            max-height: 300px;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+
+        .side-by-side .side-text {
+            max-width: 50%;
+            text-align: left;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2rem;
+                /* Adjusted for smaller screens */
+            }
+
+            .project-description {
+                font-size: 1.1rem;
+            }
+
+            .project-image {
+                max-height: 150px;
+                /* Even smaller on mobile */
+            }
+
+            .technologies {
+                font-size: 1.1rem;
+                /* Adjust for smaller screens */
+            }
+
+            .technologies strong {
+                font-size: 1.3rem;
+                /* Adjust for smaller screens */
+            }
+
+            /* Adjust flex layout for smaller screens */
+            .side-by-side {
+                flex-direction: column;
+            }
+
+            .side-by-side .side-image,
+            .side-by-side .side-text {
+                max-width: 100%;
+                margin: 0 0 20px 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="project-title">WHEEL DATA RECORDING SYSTEM</h1>
+        <div class="image-container">
+            <img src="img4.jpeg" alt="Project Image" class="project-image">
+        </div>
+        <p class="project-description">
+            The Wheel Data Recording System (WDRS) is a pioneering web application developed in-house, utilizing
+            Bootstrap, PHP, and Microsoft SQL Server database technologies. Tailored specifically for the Indian
+            Railways, WDRS revolutionizes the management of wheel set overhauling processes, encompassing both
+            Intermediate Overhauling (IOH) and Periodic Overhauling (POH) procedures. With its modular architecture and
+            comprehensive feature set, WDRS sets a new standard for efficiency, transparency, and data-driven
+            decision-making in railway maintenance operations.<br>
+            <br>
+            This system is designed to streamline the operations involved in handling wheel sets, from initial
+            assessment to final assembly. With a focus on recording crucial details and guiding users through various
+            stages, it ensures comprehensive oversight and efficient decision-making. From identifying unique
+            components to directing them through specialized procedures like oxy cutting, press out, and wheel lathe,
+            every step is seamlessly integrated into a cohesive workflow. By leveraging technology to enhance accuracy
+            and accessibility, this system aims to optimize resource utilization and uphold safety standards in the
+            maintenance of wheel sets.
+        </p>
+
+        <div class="technologies">
+            <strong>TECHNOLOGIES AND FRAMEWORKS</strong><br>
+            HTML (HyperText Markup Language)<br>
+            CSS (Cascading Style Sheets)<br>
+            PHP (Hypertext Preprocessor)<br>
+            JavaScript<br>
+            MS SQL Management Studio<br>
+            Bootstrap 5
+        </div>
+
+        <br>
+        <!-- Section for image and description side by side -->
+        <div class="side-by-side">
+            <img src="img10.png" alt="Side Image" class="side-image">
+            <p class="side-text">
+                The web application "WHEEL DATA AUTOMATION" is designed to streamline and manage the workflow related to
+                wheel set maintenance and manufacturing processes in a transportation or similar industry. This page
+                shows how that whole work flow is from start to end and comprehensive process of the
+                application's interface and functionality, detailing how different components and processes interact
+                within the system.
+            </p>
+        </div>
+        <br>
+        <a href="https://112.133.253.205/WDRS/Login-Page/" class="project-link" target="_blank">Visit my Project</a>
+    </div>
+
+    <script>
+        // Use Intersection Observer to trigger fade-in effects on scroll
+        function handleIntersection(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                } else {
+                    // Reverse the effect when scrolling up
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateY(20px)';
+                }
+            });
+        }
+
+        const observerOptions = {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+        // Select all the elements that will have the scroll effect
+        const elements = document.querySelectorAll('.project-title, .project-image, .project-description, .project-link, .technologies, .side-by-side');
+        
+        // Observe each element
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+
+</html>
